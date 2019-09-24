@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Calendar from 'react_google_calendar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const calendar_configuration = {
+  api_key: 'AIzaSyDEoqeQyrQ2HZaA7FUzYWfJEu8fXU70PAs',
+  calendars: [
+      {
+        name: 'Green House Calendar', // whatever you want to name it
+        url: 'qmgl5raib3ehhmqbov7fu0k99g@group.calendar.google.com' // your calendar URL
+      }
+    ]
 }
 
-export default App;
+class App extends React.Component {
+  constructor (props) {
+    super (props)
+    this.state = {
+      events: []
+    }
+  }
+  render () {
+    return (
+      <div className="App">
+        <Calendar
+          events={this.state.events}
+          config={calendar_configuration}
+        />
+      </div>
+    )
+  }
+}
+
+export default App
