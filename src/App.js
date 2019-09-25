@@ -45,14 +45,13 @@ class App extends React.Component {
       <Container fluid={true} style={{
         flexWrap: 'nowrap'
         }}>
-          <Row style={{ flexShrink: 1, height: 960 }}>
+          <Row style={{ height: 960 }}>
             <Col style={{
               flexGrow: 1
             }}>
               {'Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff'}
             </Col>
             <Col style={{
-              flexShrink: 2,
               alignSelf: 'center',
               fontSize: 24,
               fontWeight: 'bold',
@@ -61,7 +60,7 @@ class App extends React.Component {
               <Clock
                 className='analog-clock'
                 value={this.state.time}
-                size={800}
+                size={700}
               />
             <p style={{marginTop: 100}}>
                 {this.state.time.toTimeString()}
