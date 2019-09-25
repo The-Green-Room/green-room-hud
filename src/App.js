@@ -2,13 +2,6 @@ import React from 'react'
 import './App.css'
 import Calendar from 'react_google_calendar'
 import calendar_config from './calendar_config'
-import Clock from 'react-clock'
-import DigitalClock from 'react-digital-clock'
-import {
-  Container,
-  Row,
-  Col
-} from 'react-bootstrap'
 
 const calendar_configuration = calendar_config
 
@@ -16,8 +9,7 @@ class App extends React.Component {
   constructor (props) {
     super (props)
     this.state = {
-      events: [],
-      time: new Date()
+      events: []
     }
   }
 
