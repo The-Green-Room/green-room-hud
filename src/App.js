@@ -2,6 +2,12 @@ import React from 'react'
 import './App.css'
 import Calendar from 'react_google_calendar'
 import calendar_config from './calendar_config'
+import {
+  Container,
+  Row,
+  Col
+} from 'react-bootstrap'
+import Clock from 'react-clock'
 
 const calendar_configuration = calendar_config
 
@@ -9,7 +15,8 @@ class App extends React.Component {
   constructor (props) {
     super (props)
     this.state = {
-      events: []
+      events: [],
+      time: new Date()
     }
   }
 
@@ -38,34 +45,35 @@ class App extends React.Component {
       <Container fluid={true} style={{
         flexWrap: 'nowrap'
         }}>
-          <Row style={{ flexShrink: 1}}>
+          <Row style={{ flexShrink: 1, height: 960 }}>
             <Col style={{
-                flexGrow: 1
-              }}>
+              flexGrow: 1
+            }}>
               {'Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff'}
             </Col>
             <Col style={{
-                flexShrink: 2,
-                alignSelf: 'center'
-              }}>
+              flexShrink: 2,
+              alignSelf: 'center',
+              fontSize: 24,
+              fontWeight: 'bold',
+              textAlign: 'center'
+            }}>
               <Clock
                 className='analog-clock'
                 value={this.state.time}
                 size={800}
               />
+            <p style={{marginTop: 100}}>
+                {this.state.time.toTimeString()}
+              </p>
             </Col>
             <Col style={{
                 flexGrow: 1
-              }}>
-                <Calendar
-                  events={this.state.events}
-                  config={calendar_configuration}
-                />
-            </Col>
-          </Row>
-          <Row style={{ justifyContent: 'center', flexShrink: 1}}>
-            <Col>
-              {this.state.time.toTimeString()}
+            }}>
+              <Calendar
+                events={this.state.events}
+                config={calendar_configuration}
+              />
             </Col>
           </Row>
         </Container>
