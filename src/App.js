@@ -36,6 +36,13 @@ class App extends React.Component {
     let h
     const currentTime = this.state.time
     const bigTimeString = `${(h = currentTime.getHours()) === 0 ? 12 : h < 12 ? h : h - 12}:${currentTime.getMinutes().toString().padStart(2, '0')} ${(h < 12 ? 'AM' : 'PM')}`
+    const testQuoteString =
+    <div>
+      <p> I'm loving this canned wine thing. </p>
+        <p> It's brilliant! </p>
+          <p> I'm active! </p>
+            <p> I'm gesturing with my hands! </p>
+    </div>
 
     return (
       <div>
@@ -53,10 +60,8 @@ class App extends React.Component {
 
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
-            <Col style={{
-              flexGrow: 1
-            }}>
-              {'Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff Test STuff'}
+            <Col style={{ flexGrow: 1, alignSelf: 'center', justifyContent: 'center' }}>
+              {testQuoteString}
             </Col>
             <Col style={{
               alignSelf: 'center',
@@ -77,7 +82,7 @@ class App extends React.Component {
                 secondHandLength={90}
                 secondHandOppositeLength={18}
               />
-              <p style={{marginTop: 100, fontFamily: 'Orbitron', fontSize: 100}}>
+              <p style={{ marginTop: 100, fontFamily: 'Orbitron', fontSize: 100 }}>
                 {bigTimeString}
               </p>
             </Col>
