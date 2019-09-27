@@ -29,7 +29,7 @@ export default [
 
   'Any amount of cheese before a date is too much cheese. -Dennis',
 
-  'Taked baby. Meet at later bar, night or day sometime. -Sweet Dee',
+  '[Reading a note from Charlie] Taked baby. Meet at later bar, night or day sometime. -Sweet Dee',
 
   'Smoke some cigarettes. The smoke will suffocate the bacteria in your stomach. -Mac',
 
