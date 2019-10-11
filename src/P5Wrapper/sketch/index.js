@@ -22,8 +22,14 @@ export default function (s) {
     }
 
     s.draw = function() {
-        s.setGradient(0, 0, window.innerWidth / 2, window.innerHeight, b1, b2, X_AXIS);
-        
+        // // Background
+        // s.setGradient(0, 0, s.width / 2, s.height, b1, b2, X_AXIS);
+        // s.setGradient(s.width / 2, 0, s.width / 2, s.height, b2, b1, X_AXIS);
+        // // Foreground
+        // s.setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
+        // s.setGradient(50, 190, 540, 80, c2, c1, X_AXIS);
+
+        s.background(51)
     }
 
     s.setGradient = function(x, y, w, h, c1, c2, axis) {
