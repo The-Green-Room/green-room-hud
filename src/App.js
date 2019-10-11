@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap'
 import Clock from 'react-clock'
 import quoteStrings from './quotes'
+import P5Wrapper from './P5Wrapper'
 
 const calendar_configuration = calendar_config
 
@@ -56,6 +57,11 @@ class App extends React.Component {
 
     return (
       <div>
+        <P5Wrapper
+          p5props={{}}
+          // onSetAppState={this.onSetAppState}
+        />
+
         <link
           rel='stylesheet'
           href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'

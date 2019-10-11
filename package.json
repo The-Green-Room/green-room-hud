@@ -8,7 +8,7 @@
     "jquery": "^3.4.1",
     "moment": "^2.22.2",
     "popper.js": "^1.15.0",
-    "react": "^16.6.3",
+    "react": "^16.9.0",
     "react-big-calendar": "^0.20.2",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-clock": "^2.4.0",
@@ -17,6 +17,7 @@
     "react-iframe": "^1.8.0",
     "react-scripts": "3.1.2",
     "react_google_calendar": "^2.2.4444",
+    "typescript": "^3.6.3",
     "webpack": "^4.40.2"
   },
   "scripts": {
