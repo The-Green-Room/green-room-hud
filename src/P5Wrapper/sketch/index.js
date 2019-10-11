@@ -22,20 +22,20 @@ export default function (s) {
     }
 
     s.draw = function() {
-        // // Background
-        // s.setGradient(0, 0, s.width / 2, s.height, b1, b2, X_AXIS);
-        // s.setGradient(s.width / 2, 0, s.width / 2, s.height, b2, b1, X_AXIS);
-        // // Foreground
-        // s.setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
-        // s.setGradient(50, 190, 540, 80, c2, c1, X_AXIS);
+        // Background
+        s.setGradient(0, 0, s.width / 2, s.height, b1, b2, X_AXIS);
+        s.setGradient(s.width / 2, 0, s.width / 2, s.height, b2, b1, X_AXIS);
+        // Foreground
+        s.setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
+        s.setGradient(50, 190, 540, 80, c2, c1, X_AXIS);
 
-        s.background(51)
+        //s.background(51)
     }
 
     s.setGradient = function(x, y, w, h, c1, c2, axis) {
         s.noFill();
 
-        if (s.axis === Y_AXIS) {
+        if (axis === Y_AXIS) {
             // Top to bottom gradient
             for (let i = y; i <= y + h; i++) {
             let inter = s.map(i, y, y + h, 0, 1);
@@ -43,7 +43,7 @@ export default function (s) {
             s.stroke(c);
             s.line(x, i, x + w, i);
             }
-        } else if (s.axis === X_AXIS) {
+        } else if (axis === X_AXIS) {
             // Left to right gradient
             for (let i = x; i <= x + w; i++) {
             let inter = s.map(i, x, x + w, 0, 1);
