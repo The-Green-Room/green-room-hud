@@ -11,9 +11,9 @@ export default function (s) {
         s.createCanvas(window.innerWidth, window.innerHeight)
         
         // Define colors
-        b1 = s.color(255);
-        b2 = s.color(0);
-        c1 = s.color(204, 102, 0);
+        // b1 = s.color(255);
+        // b2 = s.color(0);
+        c1 = s.color(204, 192, 0);
         c2 = s.color(0, 102, 153);
 
         s.noLoop();
