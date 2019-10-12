@@ -5,7 +5,8 @@ export default function (s) {
     // Constants
     const Y_AXIS = 1;
     const X_AXIS = 2;
-    let b1, b2, c1, c2;
+    //let b1, b2;
+    let c1, c2;
 
     s.setup = function() {
         s.createCanvas(window.innerWidth, window.innerHeight)
