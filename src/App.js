@@ -10,6 +10,7 @@ import {
 import Clock from 'react-clock'
 import quoteStrings from './quotes'
 import P5Wrapper from './P5Wrapper'
+import Weather from './Weather'
 
 const calendar_configuration = calendar_config
 
@@ -81,9 +82,15 @@ class App extends React.Component {
 
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
-            <Col style={{ flexGrow: 1, alignSelf: 'center', fontFamily: 'Lobster' }}>
-              <p style={{ fontSize: 40 }}>{this.state.quote}</p>
-              <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
+            <Col style={{ flexGrow: 1, alignSelf: 'center' }}>
+              <Row style={{ fontFamily: 'Lobster' }}>
+                <p style={{ fontSize: 40 }}>{this.state.quote}</p>
+                <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
+              </Row>
+              <Row>
+                <Weather />
+              </Row>
+              
             </Col>
             <Col style={{
               alignSelf: 'center',
