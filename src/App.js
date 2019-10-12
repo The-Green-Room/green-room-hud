@@ -62,22 +62,7 @@ class App extends React.Component {
           // onSetAppState={this.onSetAppState}
         />
 
-        <link
-          rel='stylesheet'
-          href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'
-          integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T'
-          crossOrigin='anonymous'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Orbitron&text=0123456789:AMP'
-          rel='stylesheet'
-          type='text/css'
-        />
-        <link
-          href='https://fonts.googleapis.com/css?family=Lobster&display=swap'
-          rel='stylesheet'
-          type='text/css'
-        />
+        
 
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
