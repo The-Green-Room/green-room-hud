@@ -62,8 +62,6 @@ class App extends React.Component {
           // onSetAppState={this.onSetAppState}
         />
 
-        
-
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
             <Col style={{ flexGrow: 1, alignSelf: 'center', fontFamily: 'Lobster' }}>
