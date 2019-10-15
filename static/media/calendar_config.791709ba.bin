@@ -1,0 +1,11 @@
+export default {
+  api_key: process.env.CALENDAR_API_KEY, 
+  calendars: [
+      {
+        name: 'Green House Calendar', // whatever you want to name it
+        url: process.env.CALENDAR_URL // your calendar URL
+      }
+    ]
+}
+
+// To obtain your own api key and calendar link look here https://docs.simplecalendar.io/google-api-key/
