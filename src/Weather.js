@@ -8,11 +8,24 @@ class Weather extends React.Component {
             temperature: 0
         }
 
-        this.lat = 36.078350
-        this.long = -94.190240
+        // Default lat and long
+        this.lat = 36.078193399999996;
+        this.long = -94.1901826;
     }
     
-
+    // TODO: Ask for current location and call api based on that
+    // componentDidMount() {
+    //     var startPos;
+        
+    //     var geoSuccess = function(position) {
+    //       // Do magic with location
+    //       startPos = position;
+    //       document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+    //       document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+    //     };
+      
+    //     navigator.geolocation.getCurrentPosition(geoSuccess);
+    // }
 
     render() {
         return(
