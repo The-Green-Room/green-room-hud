@@ -63,7 +63,12 @@ class App extends React.Component {
         />
 
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
-          <Row style={{ height: 960 }}>
+          <Row style={{ height: 960,
+                        color: 'white',
+                        textShadowColor: 'black',
+                        textShadowOffset: {width: -1, height: 1},
+                        textShadowRadius: 100
+                      }}>
             <Col style={{ flexGrow: 1, alignSelf: 'center', fontFamily: 'Lobster' }}>
               <p style={{ fontSize: 40 }}>{this.state.quote}</p>
               <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
