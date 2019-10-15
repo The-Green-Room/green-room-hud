@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.b21d5843.chunk.css",
-    "main.js": "/static/js/main.cd6e124f.chunk.js",
-    "main.js.map": "/static/js/main.cd6e124f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b9e2bcea.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b9e2bcea.js.map",
-    "static/css/2.5ed8efde.chunk.css": "/static/css/2.5ed8efde.chunk.css",
-    "static/js/2.cba1ab52.chunk.js": "/static/js/2.cba1ab52.chunk.js",
-    "static/js/2.cba1ab52.chunk.js.map": "/static/js/2.cba1ab52.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.1afa805716fd4fb871808649f84587bf.js": "/precache-manifest.1afa805716fd4fb871808649f84587bf.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.5ed8efde.chunk.css.map": "/static/css/2.5ed8efde.chunk.css.map",
-    "static/css/main.b21d5843.chunk.css.map": "/static/css/main.b21d5843.chunk.css.map",
-    "static/media/calendar_config": "/static/media/calendar_config.791709ba.bin"
+    "main.css": "/hud/static/css/main.b21d5843.chunk.css",
+    "main.js": "/hud/static/js/main.cd6e124f.chunk.js",
+    "main.js.map": "/hud/static/js/main.cd6e124f.chunk.js.map",
+    "runtime-main.js": "/hud/static/js/runtime-main.2426aa9e.js",
+    "runtime-main.js.map": "/hud/static/js/runtime-main.2426aa9e.js.map",
+    "static/css/2.5ed8efde.chunk.css": "/hud/static/css/2.5ed8efde.chunk.css",
+    "static/js/2.d90bae82.chunk.js": "/hud/static/js/2.d90bae82.chunk.js",
+    "static/js/2.d90bae82.chunk.js.map": "/hud/static/js/2.d90bae82.chunk.js.map",
+    "index.html": "/hud/index.html",
+    "precache-manifest.cc7b3138fe66ad6d38943dfb1f81571b.js": "/hud/precache-manifest.cc7b3138fe66ad6d38943dfb1f81571b.js",
+    "service-worker.js": "/hud/service-worker.js",
+    "static/css/2.5ed8efde.chunk.css.map": "/hud/static/css/2.5ed8efde.chunk.css.map",
+    "static/css/main.b21d5843.chunk.css.map": "/hud/static/css/main.b21d5843.chunk.css.map",
+    "static/media/calendar_config": "/hud/static/media/calendar_config.791709ba.bin"
   }
 }
