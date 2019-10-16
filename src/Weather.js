@@ -1,11 +1,10 @@
 import React from 'react'
-import Axios from 'axios'
 
 class Weather extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            loading: true
         }
 
         // Default lat and long
@@ -18,73 +17,31 @@ class Weather extends React.Component {
     // refer to this maybe: https://stackoverflow.com/questions/13194623/get-location-when-pages-loads
 
     componentDidMount() {
-        // var startPos;
-        
-        // var geoSuccess = function(position) {
-        //   // Do magic with location
-        //   startPos = position;
-        //   document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-        //   document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-        // };
-      
-        // navigator.geolocation.getCurrentPosition(geoSuccess);
-        
-        this.setState(this.getWeather)
+        this.intervalID = setInterval(this.getWeather(this.lat, this.lon, this.apikey), 600000)
     }
 
-    getForecast() {
-        return Axios.get(
-            'api.openweathermap.org/data/2.5/weather?lat=36.078193399999996&lon=-94.1901826&APPID=5e309b45fc1941bd17f5ec40b712220f'
-        )
+    componentWillUnmount() {
+        clearInterval(this.intervalID)
     }
 
-    getWeather() {
-        this.getForecast(res => {
-          this.setState(() => {
-            return {
-              forecast: res.data
-            };
-          });
+    getWeather(lat, lon, apikey) {
+        // this string should work but its not for some reason
+        //'http://api.openweathermap.org/data/2.5/weather?lat=' + {lat} + '&lon=' + {lon} + '&APPID=' + {apikey}
+
+        this.setState({ loading: true }, () => {
+            fetch('https://api.openweathermap.org/data/2.5/weather?lat=36.078193399999996&lon=-94.1901826&APPID=5e309b45fc1941bd17f5ec40b712220f&units=imperial')
+            .then(response =>  response.json())
+            .then(data => this.setState({ 
+                loading: false,
+                data: data
+            }))
         })
-      }
-
-
-    // componentDidUpdate() {
-    //     this.setState(this.getWeather)
-    // }
-
-    
+    }
 
     render() {
-        const forecast = this.state.forecast;
-
         return(
             <div className="forecast">
-            {/* {!forecast && <Loading text="Sticking our hand out the window" />} */}
-            {forecast &&
-                this.state.forecast.list.map((item, i) => {
-                return (
-                    <div key={i}>
-                    
-                    <Link
-                        to={{
-                        pathname: `/detail/${this.state.searchTerm}`,
-                        state: { weather: item }
-                        }}>
-                        <img
-                        style={{ height: '50px' }}
-                        src={`${process.env
-                            .PUBLIC_URL}/images/weather-icons/${item.weather[0]
-                            .icon}.svg`}
-                        alt="Icon"
-                        />
-                        <p style={{ color: 'white' }}>
-                        {_.capitalize(item.weather[0].description)}
-                        </p>
-                    </Link>
-                    </div>
-                );
-                })}
+                {this.state.loading ? <p>Loading...</p> : this.state.data.main.temp}
             </div>
 
         )
