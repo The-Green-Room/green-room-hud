@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "20297abdee66d5381e8848bad0e93fa4",
+    "revision": "ec4bdcd20bd85d3726293e1ade7ebd8f",
     "url": "/hud/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hud/static/css/2.e79d789d.chunk.css"
   },
   {
-    "revision": "e836652d5782c39e4406",
+    "revision": "57ef531536899e6698c3",
     "url": "/hud/static/css/main.b21d5843.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hud/static/js/2.ab10da6a.chunk.js"
   },
   {
-    "revision": "e836652d5782c39e4406",
-    "url": "/hud/static/js/main.0163a58a.chunk.js"
+    "revision": "57ef531536899e6698c3",
+    "url": "/hud/static/js/main.e55853dc.chunk.js"
   },
   {
     "revision": "8ab8192c8afbf05cc8c4",

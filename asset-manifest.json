@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hud/static/css/main.b21d5843.chunk.css",
-    "main.js": "/hud/static/js/main.0163a58a.chunk.js",
-    "main.js.map": "/hud/static/js/main.0163a58a.chunk.js.map",
+    "main.js": "/hud/static/js/main.e55853dc.chunk.js",
+    "main.js.map": "/hud/static/js/main.e55853dc.chunk.js.map",
     "runtime-main.js": "/hud/static/js/runtime-main.2426aa9e.js",
     "runtime-main.js.map": "/hud/static/js/runtime-main.2426aa9e.js.map",
     "static/css/2.e79d789d.chunk.css": "/hud/static/css/2.e79d789d.chunk.css",
     "static/js/2.ab10da6a.chunk.js": "/hud/static/js/2.ab10da6a.chunk.js",
     "static/js/2.ab10da6a.chunk.js.map": "/hud/static/js/2.ab10da6a.chunk.js.map",
     "index.html": "/hud/index.html",
-    "precache-manifest.86d6980a455ba3f21d0455b73f2de343.js": "/hud/precache-manifest.86d6980a455ba3f21d0455b73f2de343.js",
+    "precache-manifest.6d0bc66e413bb32f646b8d5de408b4f3.js": "/hud/precache-manifest.6d0bc66e413bb32f646b8d5de408b4f3.js",
     "service-worker.js": "/hud/service-worker.js",
     "static/css/2.e79d789d.chunk.css.map": "/hud/static/css/2.e79d789d.chunk.css.map",
     "static/css/main.b21d5843.chunk.css.map": "/hud/static/css/main.b21d5843.chunk.css.map",
