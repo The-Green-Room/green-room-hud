@@ -17,6 +17,7 @@
     "react-digital-clock": "^0.1.2",
     "react-dom": "^16.9.0",
     "react-iframe": "^1.8.0",
+    "react-open-weather": "^0.5.2",
     "react-scripts": "3.1.2",
     "react_google_calendar": "^2.2.4444",
     "typescript": "^3.6.3",
