@@ -43,12 +43,17 @@ class Weather extends React.Component {
         return(
             <div className="forecast">
                 {this.state.loading ? <p>Loading...</p> : 
-                                    <h1>
-                                        It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
-                                    </h1>
-                                    // <h5>
-                                    //     It's currently {this.state.data.main.temp} degrees in {this.state.data.name}
-                                    // </h5>
+                                    <div>
+                                        <h3>
+                                            It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
+                                        </h3>
+                                        <h5>
+                                            High of {Math.trunc(this.state.data.main.temp_max)} degrees
+                                        </h5>
+                                        <h5>
+                                            Low of {Math.trunc(this.state.data.main.temp_min)} degrees
+                                        </h5>
+                                    </div>
                 }                
             </div>
 
