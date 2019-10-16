@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/hud/static/css/main.b21d5843.chunk.css",
-    "main.js": "/hud/static/js/main.cd6e124f.chunk.js",
-    "main.js.map": "/hud/static/js/main.cd6e124f.chunk.js.map",
+    "main.js": "/hud/static/js/main.0163a58a.chunk.js",
+    "main.js.map": "/hud/static/js/main.0163a58a.chunk.js.map",
     "runtime-main.js": "/hud/static/js/runtime-main.2426aa9e.js",
     "runtime-main.js.map": "/hud/static/js/runtime-main.2426aa9e.js.map",
-    "static/css/2.5ed8efde.chunk.css": "/hud/static/css/2.5ed8efde.chunk.css",
-    "static/js/2.d90bae82.chunk.js": "/hud/static/js/2.d90bae82.chunk.js",
-    "static/js/2.d90bae82.chunk.js.map": "/hud/static/js/2.d90bae82.chunk.js.map",
+    "static/css/2.e79d789d.chunk.css": "/hud/static/css/2.e79d789d.chunk.css",
+    "static/js/2.ab10da6a.chunk.js": "/hud/static/js/2.ab10da6a.chunk.js",
+    "static/js/2.ab10da6a.chunk.js.map": "/hud/static/js/2.ab10da6a.chunk.js.map",
     "index.html": "/hud/index.html",
-    "precache-manifest.b60a2ea21478123cd7daa5845c78117c.js": "/hud/precache-manifest.b60a2ea21478123cd7daa5845c78117c.js",
+    "precache-manifest.86d6980a455ba3f21d0455b73f2de343.js": "/hud/precache-manifest.86d6980a455ba3f21d0455b73f2de343.js",
     "service-worker.js": "/hud/service-worker.js",
-    "static/css/2.5ed8efde.chunk.css.map": "/hud/static/css/2.5ed8efde.chunk.css.map",
+    "static/css/2.e79d789d.chunk.css.map": "/hud/static/css/2.e79d789d.chunk.css.map",
     "static/css/main.b21d5843.chunk.css.map": "/hud/static/css/main.b21d5843.chunk.css.map",
     "static/media/calendar_config": "/hud/static/media/calendar_config.791709ba.bin"
   }
