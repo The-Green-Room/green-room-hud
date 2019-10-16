@@ -1,4 +1,8 @@
 import React from 'react'
+import {
+    Row,
+    Col
+} from 'react-bootstrap'
 
 class Weather extends React.Component {
     constructor(props) {
@@ -42,7 +46,7 @@ class Weather extends React.Component {
     }
 
     dayOrNight() {
-        if (this.props.props.time.getHours() > 12) {
+        if (this.props.props.time.getHours() > this.state.data) {
             return ('day')
         } else {
             return ('night')
@@ -54,16 +58,31 @@ class Weather extends React.Component {
             <div className="forecast">
                 {this.state.loading ? <p>Loading...</p> : 
                     <div>
-                        <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }`}></i>
-                        <h3>
-                            It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
-                        </h3>
-                        <h5>
-                            High of {Math.trunc(this.state.data.main.temp_max)} degrees
-                        </h5>
-                        <h5>
-                            Low of {Math.trunc(this.state.data.main.temp_min)} degrees
-                        </h5>
+                        <Row>
+                            <Col sm={2}>
+                                <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }`}
+                                    style = {{
+                                    fontSize: 40
+                                }}></i>
+                            </Col>
+                            <Col sm={8}>
+                                <h3>
+                                    It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
+                                </h3>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h5>
+                                    High of {Math.trunc(this.state.data.main.temp_max)}
+                                </h5>
+                            </Col>
+                            <Col>
+                                <h5>
+                                    Low of {Math.trunc(this.state.data.main.temp_min)}
+                                </h5>
+                            </Col>
+                        </Row>
                     </div>
                 }                
             </div>
