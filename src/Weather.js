@@ -55,7 +55,7 @@ class Weather extends React.Component {
 
     render() {
         return(
-            <div className="forecast">
+            <div className="forecast" style = {{ fontFamily: 'Muli'}}>
                 {this.state.loading ? <p>Loading...</p> : 
                     <div>
                         <Row>
