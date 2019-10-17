@@ -1,6 +1,6 @@
 .weather {
   display: flex;
-  border: solid 2px #4675AA;
+  /* border: solid 2px #4675AA; */
   font-family: 'Muli';
   
 }
@@ -8,5 +8,5 @@
 .icon {
   align-items: flex-end;
   height: 10vh;
-  font-size: 60px;
+  font-size: 50px;
 }
