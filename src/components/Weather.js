@@ -13,9 +13,9 @@ class Weather extends React.Component {
     }
 
     // Default lat and long
-    this.lat = 36.078193399999996;
-    this.lon = -94.1901826;
-    this.apikey='2a8bf8ec10b65fdc9695467f42bef9b2'
+    this.lat = 36.078193399999996
+    this.lon = -94.1901826
+    this.apikey=process.env.WEATHER_API_KEY
     this.units='imperial'
 
     console.log(props)
