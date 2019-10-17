@@ -34,8 +34,6 @@ class Quote extends React.Component {
       <div style={{ fontFamily: 'Lobster' }}> 
         <p style={{ fontSize: 40 }}>{this.state.quote}</p>
         <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
-
-        <p> Quote </p>
       </div>
     )
   }
