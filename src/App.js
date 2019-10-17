@@ -8,7 +8,7 @@ import {
   Col
 } from 'react-bootstrap'
 import Clock from 'react-clock'
-import quoteStrings from './quotes'
+import Quote from './Quote'
 import P5Wrapper from './P5Wrapper'
 import Weather from './Weather'
 
@@ -21,19 +21,12 @@ class App extends React.Component {
     this.state = {
       events: [],
       time: new Date(),
-      quote: '',
-      author: ''
+      
     }
   }
 
   componentDidMount () {
-    this.getNewQuote()
-    this.interalID = setInterval(() => {
-      this.tick()
-      if ((this.state.time.getMinutes() % 15 === 0) && (this.state.time.getSeconds() % 60 === 0)) {
-        this.getNewQuote()
-      }
-    }, 1000)
+    this.interalID = setInterval(() => { this.tick() } , 1000)
   }
 
   componentWillUnmount () {
@@ -42,13 +35,6 @@ class App extends React.Component {
 
   tick () {
     this.setState({ ...this.state, time: new Date() })
-  }
-
-  getNewQuote () {
-    const fullQuoteText = quoteStrings[Math.floor(Math.random() * 100)]
-    const authorSlice = fullQuoteText.slice(fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
-    const quoteSlice = fullQuoteText.slice(0, fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
-    this.setState({ ...this.state, quote: quoteSlice, author: authorSlice})
   }
 
   render () {
@@ -66,22 +52,18 @@ class App extends React.Component {
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
             <Col style={{ flexGrow: 1, alignSelf: 'center' }}>
-              <Row style={{ fontFamily: 'Lobster' }}>
-                <p style={{ fontSize: 40 }}>{this.state.quote}</p>
-                <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
+              <Row>
+                <Quote />
               </Row>
               <Row>
                 <Col style={{  }}>
                   <Weather 
-                    className="fixedBottom"
                     props = {{
                       time: this.state.time
                     }} 
                   />
-                </Col>
-                
+                </Col> 
               </Row>
-              
             </Col>
             <Col style={{
               alignSelf: 'center',
