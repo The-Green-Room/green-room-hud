@@ -1,5 +1,5 @@
 .weather {
-  border: solid 2px #4675AA;
+  /* border: solid 2px #4675AA; */
   display: flex;
   font-family: 'Muli', sans-serif;
   text-align: center;
@@ -9,24 +9,24 @@
 }
 
 .icon {
-  border: solid 2px #000000;
+  /* border: solid 2px #000000; */
   font-size: 80px;
   flex-grow: 1;
 }
 
 .currentTemp {
-  border: solid 2px #000000;
+  /* border: solid 2px #000000; */
   flex-grow: 1;
 
 }
 
 .currentStatus{
-  border: solid 2px #000000;
+  /* border: solid 2px #000000; */
   flex-grow: 4;
 }
 
 .high-and-low {
-  border: solid 2px #000000;
+  /* border: solid 2px #000000; */
   justify-content: space-between;
   align-items: stretch;
   font-size: 50px;
