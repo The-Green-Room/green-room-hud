@@ -35,7 +35,9 @@ class App extends React.Component {
   }
 
   tick () {
-    this.setState({ ...this.state, time: new Date() })
+    this.setState((prevState) => {
+      return { ...prevState, time: new Date() }
+    })
   }
 
   render () {
@@ -60,9 +62,7 @@ class App extends React.Component {
                 <Col>
                   <Weather 
                     className='weather'
-                    props = {{
-                      time: this.state.time
-                    }} 
+                    time={ this.state.time } 
                   />
                 </Col> 
               </Row>

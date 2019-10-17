@@ -24,6 +24,7 @@ export default function (s) {
 
     s.setup = function() {
         s.createCanvas(window.innerWidth, window.innerHeight)
+        s.frameRate(4)
         
         // Define colors
         c1 = s.color(r1 % 255, g1 % 255, b1 % 255)
@@ -33,7 +34,7 @@ export default function (s) {
     s.draw = function() {
         s.setGradient(0, 0, s.width / 2, s.height, c1, c2, Y_AXIS)
         s.setGradient(s.width/2, 0, s.width/2, s.height, c1, c2, Y_AXIS)
-        
+
         s.changeColors()
     }
 
