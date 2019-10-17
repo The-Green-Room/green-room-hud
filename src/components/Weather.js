@@ -15,8 +15,8 @@ class Weather extends React.Component {
     // Default lat and long
     this.lat = 36.078193399999996;
     this.lon = -94.1901826;
-    this.apikey='2a8bf8ec10b65fdc9695467f42bef9b2'
-    this.units='imperial'
+    this.apikey = '5e309b45fc1941bd17f5ec40b712220f'
+    this.units = 'imperial'
   }
     
   // TODO: Ask for current location and call api based on that
@@ -31,9 +31,6 @@ class Weather extends React.Component {
   }
 
   getWeather(lat, lon, apikey, units) {
-    // this string should work but its not for some reason
-    //'http://api.openweathermap.org/data/2.5/weather?lat=' + {lat} + '&lon=' + {lon} + '&APPID=' + {apikey}
-
     this.setState({ loading: true }, () => {
       fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&APPID=' + apikey + '&units=' + units)
       .then(response =>  response.json())
@@ -41,11 +38,10 @@ class Weather extends React.Component {
         loading: false,
         data: data
       }))
-      })
+    })
   }
 
   dayOrNight() {
-    // let date = new this.props.props.time
     var currentTimeUTC =  Date.UTC(this.props.props.time.getUTCFullYear(), this.props.props.time.getUTCMonth(), this.props.props.time.getUTCDate(),
     this.props.props.time.getUTCHours(), this.props.props.time.getUTCMinutes(), this.props.props.time.getUTCSeconds());
 
@@ -65,14 +61,14 @@ class Weather extends React.Component {
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col  className="icon md-2">
+              <Col className="icon md-2">
                   {/* TODO: call dayOrNight() only when getting weather */}
                   <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
               </Col>
               <Col className='currentTemp md-8'>
-                <h3>
-                  It's {Math.trunc(this.state.data.main.temp)}°
-                </h3>
+              <h3>
+                It's {Math.trunc(this.state.data.main.temp)}° and {this.state.data.weather["0"].description} in {this.state.data.name}
+              </h3>
               </Col>
             </Row>
             <Row className='high-and-low'>

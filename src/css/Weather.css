@@ -1,8 +1,7 @@
 .weather {
   display: flex;
-  border: solid 2px #4675AA;
+  /* border: solid 2px #4675AA; */
   font-family: 'Muli', sans-serif;
-  
 }
 
 .icon {
@@ -12,11 +11,13 @@
 }
 
 .currentTemp{
-  border: solid 2px #000000
+  /* border: solid 2px #000000; */
+  flex-grow: 2;
 }
 
 .high-and-low {
-  border: solid 2px #FFFFFF;
+  /* border: solid 2px #FFFFFF; */
   justify-content: space-between;
   align-items: stretch;
+  font-size: 50px;
 }

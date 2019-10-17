@@ -57,7 +57,7 @@ class App extends React.Component {
                 <Quote />
               </Row>
               <Row>
-                <Col style={{  }}>
+                <Col>
                   <Weather 
                     className='weather'
                     props = {{
@@ -81,7 +81,7 @@ class App extends React.Component {
                 secondHandLength={90}
                 secondHandOppositeLength={18}
               />
-              <p style={{ marginTop: 100, fontFamily: 'Orbitron', fontSize: 100 }}>
+              <p style={{ marginTop: 100, fontFamily: 'Orbitron', fontSize: 100, textAlign: "center" }}>
                 {bigTimeString}
               </p>
             </Col>

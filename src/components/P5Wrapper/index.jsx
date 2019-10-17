@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types'
+import '../../css/P5Wrapper.css'
 
-import sketch from './sketch'
+import sketch from './sketch2'
 
 export default class P5Wrapper extends Component {
     // static propTypes = {
@@ -25,12 +26,7 @@ export default class P5Wrapper extends Component {
 
     render() {
         return(
-            <div 
-                id = "canvas-container"
-                style={{ width: "100%", 
-                         textAlign: "center",
-                         position: "fixed" }}
-            />
+            <div id='canvas-container' className="canvas-container" />
         )
     }
 }
