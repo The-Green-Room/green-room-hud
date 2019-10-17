@@ -13,10 +13,10 @@ class Weather extends React.Component {
     }
 
     // Default lat and long
-    this.lat = 36.078193399999996
-    this.lon = -94.1901826
-    this.apikey=process.env.WEATHER_API_KEY
-    this.units='imperial'
+    this.lat = 36.078193399999996;
+    this.lon = -94.1901826;
+    this.apikey = '5e309b45fc1941bd17f5ec40b712220f'
+    this.units = 'imperial'
 
     console.log(props)
   }
@@ -58,6 +58,7 @@ class Weather extends React.Component {
   }
 
   render() {
+    console.log("apikey " + this.apikey)
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
