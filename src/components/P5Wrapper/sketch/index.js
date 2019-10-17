@@ -15,11 +15,11 @@ export default function (s) {
     let g2 = 102
     let b2 = 153
 
-    let r1DirectionForeward = true
+    // let r1DirectionForeward = true
     let g1DirectionForeward = true
-    let b1DirectionForeward = true
-    let r2DirectionForeward = true
-    let g2DirectionForeward = true
+    // let b1DirectionForeward = true
+    // let r2DirectionForeward = true
+    // let g2DirectionForeward = true
     let b2DirectionForeward = true
 
     s.setup = function() {
