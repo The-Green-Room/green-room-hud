@@ -3,7 +3,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap'
-import './Weather.css'
+import '../css/Weather.css'
 
 class Weather extends React.Component {
   constructor(props) {
@@ -50,8 +50,6 @@ class Weather extends React.Component {
     // let date = new this.props.props.time
     var currentTimeUTC =  Date.UTC(this.props.props.time.getUTCFullYear(), this.props.props.time.getUTCMonth(), this.props.props.time.getUTCDate(),
     this.props.props.time.getUTCHours(), this.props.props.time.getUTCMinutes(), this.props.props.time.getUTCSeconds());
-
-    
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {

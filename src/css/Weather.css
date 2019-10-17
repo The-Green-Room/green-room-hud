@@ -1,9 +1,11 @@
 .weather {
-  font-family: 'Muli'
+  display: flex;
+  border: solid 2px #4675AA;
+  font-family: 'Muli';
+  
 }
 
 .icon {
-  display: flex;
   align-items: flex-end;
   height: 10vh;
   font-size: 60px;

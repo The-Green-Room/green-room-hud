@@ -1,16 +1,16 @@
 import React from 'react'
-import './App.css'
+import './css/App.css'
 import Calendar from 'react_google_calendar'
-import calendar_config from './calendar_config'
+import calendar_config from './utils/calendar_config'
 import {
   Container,
   Row,
   Col
 } from 'react-bootstrap'
 import Clock from 'react-clock'
-import Quote from './Quote'
-import P5Wrapper from './P5Wrapper'
-import Weather from './Weather'
+import Quote from './components/Quote'
+import P5Wrapper from './components/P5Wrapper'
+import Weather from './components/Weather'
 
 const calendar_configuration = calendar_config
 
@@ -58,6 +58,7 @@ class App extends React.Component {
               <Row>
                 <Col style={{  }}>
                   <Weather 
+                    className='weather'
                     props = {{
                       time: this.state.time
                     }} 

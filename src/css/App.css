@@ -40,3 +40,18 @@
       font-size: 0.8em; /* 0.8x default size */
       }
   }
+
+
+/* .analog-clock {
+  background: burlywood;
+} */
+
+/* .weather {
+  display: flexbox;
+
+  border: solid 2px #4675AA;
+  order: 1;
+  flex: 0 1 auto;
+  align-self: flex-end;
+} */
+

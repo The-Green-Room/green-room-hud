@@ -1,5 +1,5 @@
 import React from 'react'
-import quoteStrings from './quotes'
+import quoteStrings from '../utils/quotes'
 
 class Quote extends React.Component {
   constructor() {
