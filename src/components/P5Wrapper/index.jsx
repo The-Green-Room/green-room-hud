@@ -26,7 +26,9 @@ export default class P5Wrapper extends Component {
 
     render() {
         return(
-            <div id = "canvas-container" />
+            <div id='canvas-container' className="canvas-container">
+
+            </div>
         )
     }
 }
