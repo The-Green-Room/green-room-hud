@@ -101,8 +101,8 @@ class Weather extends React.Component {
             <Row>
               {this.state.data && 
                 <Col>
-                  <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
-                  <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
+                  <i className={ `wind-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
+                  <p className='wind-text'>{ this.state.data.wind.speed } mi/h</p>
                 </Col>
               }
               

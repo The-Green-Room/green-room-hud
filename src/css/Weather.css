@@ -12,18 +12,18 @@
 .weather-icon {
   border: solid 2px var(--box-color);
 
-  font-size: 80px;
+  font-size: 100px;
   flex-grow: 1;
 }
 
-.direction-icon {
+.wind-icon {
   border: solid 2px var(--box-color);
 
   flex-grow: 1;
-  font-size: 50px;
+  font-size: 65px;
 }
 
-.direction-text {
+.wind-text {
   border: solid 2px var(--box-color);
 
   font-size: 20px;
@@ -34,6 +34,7 @@
 
   flex-grow: 2;
   font-size: 72px;
+  align-items: center;
 }
 
 .current-status{
