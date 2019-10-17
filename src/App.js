@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/App.css'
+import './css/Clock.css'
 import Calendar from 'react_google_calendar'
 import calendar_config from './utils/calendar_config'
 import {
@@ -66,12 +67,7 @@ class App extends React.Component {
                 </Col> 
               </Row>
             </Col>
-            <Col style={{
-              alignSelf: 'center',
-              fontSize: 24,
-              fontWeight: 'bold',
-              textAlign: 'center'
-            }}>
+            <Col className='clock'>
               <Clock
                 className='analog-clock'
                 value={this.state.time}
@@ -91,6 +87,7 @@ class App extends React.Component {
             </Col>
             <Col style={{ flexGrow: 1 }}>
               <Calendar
+                className="calendar"
                 events={this.state.events}
                 config={calendar_configuration}
               />
