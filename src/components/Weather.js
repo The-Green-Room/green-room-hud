@@ -61,29 +61,35 @@ class Weather extends React.Component {
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col className="icon">
+              <Col className="weather-icon">
                 {/* TODO: call dayOrNight() only when getting weather */}
-                <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
+                <i className={ `wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
               </Col>
-              <Col className="currentTemp">
-                <h1>{Math.trunc(this.state.data.main.temp)}°</h1>
+              <Col className="current-temp">
+                <p>{Math.trunc(this.state.data.main.temp)}°</p>
               </Col>
-              <Col className='currentStatus'>
-              <h3>
+              <Col className='current-status'>
+              <p>
                 It's {Math.trunc(this.state.data.main.temp)}° and {this.state.data.weather["0"].description} in {this.state.data.name}
-              </h3>
+              </p>
               </Col>
             </Row>
-            <Row className='high-and-low'>
+            <Row>
               <Col>
-                <h5>
-                  High {Math.trunc(this.state.data.main.temp_max)}°
-                </h5>
+                <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
+                <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
               </Col>
-              <Col>
-                <h5>
-                  Low {Math.trunc(this.state.data.main.temp_min)}°
-                </h5>
+              <Col className='high-and-low'>
+                <Col>
+                  <p>
+                    High {Math.trunc(this.state.data.main.temp_max)}°
+                  </p>
+                </Col>
+                <Col>
+                  <p>
+                    Low {Math.trunc(this.state.data.main.temp_min)}°
+                  </p>
+                </Col>
               </Col>
             </Row>
           </div>
