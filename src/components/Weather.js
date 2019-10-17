@@ -80,7 +80,6 @@ class Weather extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 

@@ -46,14 +46,19 @@
   background: burlywood;
 } */
 
-/* .weather {
-  display: flexbox;
+.weather {
+  /* display: flexbox;
 
   border: solid 2px #4675AA;
   order: 1;
   flex: 0 1 auto;
-  align-self: flex-end;
-} */
+  align-self: flex-end; */
+  height: 50%;
+}
+
+.quote {
+  height: 50%;
+}
 
 /* .calendar {
   background-blend-mode: saturation;
