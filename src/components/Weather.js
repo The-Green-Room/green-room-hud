@@ -21,8 +21,6 @@ class Weather extends React.Component {
       data: {}
     }
 
-    this.getWeather(this.lat, this.lon, this.apikey, this.units)
-
     console.log(props)
   }
     
@@ -30,6 +28,7 @@ class Weather extends React.Component {
   // refer to this maybe: https://stackoverflow.com/questions/13194623/get-location-when-pages-loads
 
   componentDidMount() {
+    this.getWeather(this.lat, this.lon, this.apikey, this.units)
     this.intervalID = setInterval(() => {
       this.getWeather(this.lat, this.lon, this.apikey, this.units)
       console.log(this.intervalID)
