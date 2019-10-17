@@ -8,30 +8,39 @@ export default function (s) {
     //let b1, b2;
     let c1, c2;
 
+    let r1 = 204
+    let g1 = 192
+    let b1 = 0
+    let r2 = 0
+    let g2 = 102
+    let b2 = 153
+
     s.setup = function() {
         s.createCanvas(window.innerWidth, window.innerHeight)
         
         // Define colors
-        // b1 = s.color(255);
-        // b2 = s.color(0);
-        c1 = s.color(204, 192, 0);
-        c2 = s.color(0, 102, 153);
-
-        s.noLoop();
-        // console.log('::: displayDensity:', s.displayDensity())
-        // console.log('::: pixelDensity:', s.pixelDensity())
+        c1 = s.color(r1 % 255, g1 % 255, b1 % 255);
+        c2 = s.color(r2 % 255, g2 % 255, b2 % 255);
     }
 
     s.draw = function() {
-        // Background
-        //s.setGradient(0, 0, s.width / 2, s.height, b1, b2, X_AXIS);
-        //s.setGradient(s.width / 2, 0, s.width / 2, s.height, b2, b1, X_AXIS);
-        // Foreground
-        //s.setGradient(50, 90, 540, 80, c1, c2, Y_AXIS);
-        //s.setGradient(50, 190, 540, 80, c2, c1, X_AXIS);
-        
         s.setGradient(0, 0, s.width / 2, s.height, c1, c2, Y_AXIS)
         s.setGradient(s.width/2, 0, s.width/2, s.height, c1, c2, Y_AXIS)
+        
+        s.changeColors()
+    }
+
+    s.changeColors = function() {
+        
+        r1++
+        //g1++
+        //b1++
+        //r2++
+        // g2++
+        // b2++
+
+        c1 = s.color(r1 % 255, g1 % 255, b1 % 255);
+        c2 = s.color(r2 % 255, g2 % 255, b2 % 255);
     }
 
     s.setGradient = function(x, y, w, h, c1, c2, axis) {
