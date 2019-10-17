@@ -61,23 +61,26 @@ class Weather extends React.Component {
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col className="icon md-2">
-                  {/* TODO: call dayOrNight() only when getting weather */}
-                  <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
+              <Col className="icon">
+                {/* TODO: call dayOrNight() only when getting weather */}
+                <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
               </Col>
-              <Col className='currentTemp md-8'>
+              <Col className="currentTemp">
+                <h1>{Math.trunc(this.state.data.main.temp)}°</h1>
+              </Col>
+              <Col className='currentStatus'>
               <h3>
                 It's {Math.trunc(this.state.data.main.temp)}° and {this.state.data.weather["0"].description} in {this.state.data.name}
               </h3>
               </Col>
             </Row>
             <Row className='high-and-low'>
-              <Col className='md-5'>
+              <Col>
                 <h5>
                   High {Math.trunc(this.state.data.main.temp_max)}°
                 </h5>
               </Col>
-              <Col className='md-5'>
+              <Col>
                 <h5>
                   Low {Math.trunc(this.state.data.main.temp_min)}°
                 </h5>
