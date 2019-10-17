@@ -1,7 +1,7 @@
 .weather {
   display: flex;
   border: solid 2px #4675AA;
-  font-family: 'Muli';
+  font-family: 'Muli', sans-serif;
   
 }
 
@@ -9,4 +9,14 @@
   align-items: flex-end;
   height: 10vh;
   font-size: 60px;
+}
+
+.currentTemp{
+  border: solid 2px #000000
+}
+
+.high-and-low {
+  border: solid 2px #FFFFFF;
+  justify-content: space-between;
+  align-items: stretch;
 }

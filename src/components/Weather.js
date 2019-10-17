@@ -17,8 +17,6 @@ class Weather extends React.Component {
     this.lon = -94.1901826;
     this.apikey='2a8bf8ec10b65fdc9695467f42bef9b2'
     this.units='imperial'
-
-    console.log(props)
   }
     
   // TODO: Ask for current location and call api based on that
@@ -53,10 +51,10 @@ class Weather extends React.Component {
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      console.log("day")
+      // console.log("day")
       return ('day')
     } else {
-      console.log("night")
+      // console.log("night")
       return ('night')
       }
   }
@@ -67,24 +65,25 @@ class Weather extends React.Component {
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col  className="icon" md={2}>
+              <Col  className="icon md-2">
+                  {/* TODO: call dayOrNight() only when getting weather */}
                   <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
               </Col>
-              <Col md={8}>
+              <Col className='currentTemp md-8'>
                 <h3>
-                  It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
+                  It's {Math.trunc(this.state.data.main.temp)}°
                 </h3>
               </Col>
             </Row>
-            <Row>
-              <Col>
+            <Row className='high-and-low'>
+              <Col className='md-5'>
                 <h5>
-                  High of {Math.trunc(this.state.data.main.temp_max)}
+                  High {Math.trunc(this.state.data.main.temp_max)}°
                 </h5>
               </Col>
-              <Col>
+              <Col className='md-5'>
                 <h5>
-                  Low of {Math.trunc(this.state.data.main.temp_min)}
+                  Low {Math.trunc(this.state.data.main.temp_min)}°
                 </h5>
               </Col>
             </Row>
