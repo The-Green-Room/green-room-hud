@@ -15,12 +15,19 @@ export default function (s) {
     let g2 = 102
     let b2 = 153
 
+    let r1DirectionForeward = true
+    let g1DirectionForeward = true
+    let b1DirectionForeward = true
+    let r2DirectionForeward = true
+    let g2DirectionForeward = true
+    let b2DirectionForeward = true
+
     s.setup = function() {
         s.createCanvas(window.innerWidth, window.innerHeight)
         
         // Define colors
-        c1 = s.color(r1 % 255, g1 % 255, b1 % 255);
-        c2 = s.color(r2 % 255, g2 % 255, b2 % 255);
+        c1 = s.color(r1 % 255, g1 % 255, b1 % 255)
+        c2 = s.color(r2 % 255, g2 % 255, b2 % 255)
     }
 
     s.draw = function() {
@@ -31,16 +38,32 @@ export default function (s) {
     }
 
     s.changeColors = function() {
-        
-        r1++
-        //g1++
-        //b1++
-        //r2++
-        // g2++
-        // b2++
+        if (g1DirectionForeward && g1 > 255) {
+            g1DirectionForeward = false          
+        } else if (!g1DirectionForeward && g1 < -255) {
+            g1DirectionForeward = true
+        } else if (g1DirectionForeward) {
+            g1++
+            console.log('foreward ' + g1)
+        } else if (!g1DirectionForeward) {
+            g1--
+            console.log('reverse ' + g1)
+        }
 
-        c1 = s.color(r1 % 255, g1 % 255, b1 % 255);
-        c2 = s.color(r2 % 255, g2 % 255, b2 % 255);
+        if (b2DirectionForeward && b2 > 255) {
+            g1DirectionForeward = false          
+        } else if (!b2DirectionForeward && b2 < -255) {
+            b2DirectionForeward = true
+        } else if (b2DirectionForeward) {
+            b2++
+            console.log('foreward ' + b2)
+        } else if (!b2DirectionForeward) {
+            b2--
+            console.log('reverse ' + b2)
+        }
+
+        c1 = s.color(r1, g1, b1)
+        c2 = s.color(r2, g2, b2)
     }
 
     s.setGradient = function(x, y, w, h, c1, c2, axis) {
