@@ -58,7 +58,6 @@ class Weather extends React.Component {
   }
 
   render() {
-    console.log("apikey " + this.apikey)
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
