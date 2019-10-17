@@ -65,18 +65,12 @@ class Weather extends React.Component {
 
   render() {
     return(
-      <div className="forecast" 
-          style = {{ 
-            fontFamily: 'Muli'
-          }}>
+      <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col md={2}>
-                  <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }`}
-                  style = {{
-                  fontSize: 60
-                  }}></i>
+              <Col  className="icon" md={2}>
+                  <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }` } ></i>
               </Col>
               <Col md={8}>
                 <h3>
