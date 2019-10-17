@@ -75,7 +75,7 @@ class Weather extends React.Component {
               <Col md={2}>
                   <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }`}
                   style = {{
-                  fontSize: 40
+                  fontSize: 60
                   }}></i>
               </Col>
               <Col md={8}>
