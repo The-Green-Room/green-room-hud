@@ -33,9 +33,6 @@ class Weather extends React.Component {
   }
 
   getWeather(lat, lon, apikey, units) {
-    // this string should work but its not for some reason
-    //'http://api.openweathermap.org/data/2.5/weather?lat=' + {lat} + '&lon=' + {lon} + '&APPID=' + {apikey}
-
     this.setState({ loading: true }, () => {
       fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&APPID=' + apikey + '&units=' + units)
       .then(response =>  response.json())
@@ -43,11 +40,10 @@ class Weather extends React.Component {
         loading: false,
         data: data
       }))
-      })
+    })
   }
 
   dayOrNight() {
-    // let date = new this.props.props.time
     var currentTimeUTC =  Date.UTC(this.props.props.time.getUTCFullYear(), this.props.props.time.getUTCMonth(), this.props.props.time.getUTCDate(),
     this.props.props.time.getUTCHours(), this.props.props.time.getUTCMinutes(), this.props.props.time.getUTCSeconds());
 
