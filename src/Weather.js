@@ -3,6 +3,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap'
+import './Weather.css'
 
 class Weather extends React.Component {
   constructor(props) {
@@ -39,33 +40,45 @@ class Weather extends React.Component {
       fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&APPID=' + apikey + '&units=' + units)
       .then(response =>  response.json())
       .then(data => this.setState({ 
-      loading: false,
-      data: data
+        loading: false,
+        data: data
       }))
       })
   }
 
   dayOrNight() {
-    if (this.props.props.time.getHours() > this.state.data) {
+    // let date = new this.props.props.time
+    var currentTimeUTC =  Date.UTC(this.props.props.time.getUTCFullYear(), this.props.props.time.getUTCMonth(), this.props.props.time.getUTCDate(),
+    this.props.props.time.getUTCHours(), this.props.props.time.getUTCMinutes(), this.props.props.time.getUTCSeconds());
+
+    
+
+    if (currentTimeUTC > this.state.data.sys.sunrise &&
+        currentTimeUTC < this.state.data.sys.sunset)  {
+      console.log("day")
       return ('day')
     } else {
+      console.log("night")
       return ('night')
       }
   }
 
   render() {
     return(
-      <div className="forecast" style = {{ fontFamily: 'Muli'}}>
+      <div className="forecast" 
+          style = {{ 
+            fontFamily: 'Muli'
+          }}>
         {this.state.loading ? <p>Loading...</p> : 
           <div>
             <Row>
-              <Col sm={2}>
+              <Col md={2}>
                   <i className={`wi wi-owm-${ this.dayOrNight() }-${ this.state.data.weather["0"].id }`}
                   style = {{
                   fontSize: 40
                   }}></i>
               </Col>
-              <Col sm={8}>
+              <Col md={8}>
                 <h3>
                   It's currently {Math.trunc(this.state.data.main.temp)} degrees in {this.state.data.name}
                 </h3>
@@ -84,7 +97,7 @@ class Weather extends React.Component {
               </Col>
             </Row>
           </div>
-        }                
+        }         
       </div>
     )
   }

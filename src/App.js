@@ -71,11 +71,15 @@ class App extends React.Component {
                 <p className='text-right' style={{ fontSize: 24 }}>{this.state.author}</p>
               </Row>
               <Row>
-                <Weather 
-                  props = {{
-                    time: this.state.time
-                  }}  
-                />
+                <Col style={{  }}>
+                  <Weather 
+                    className="fixedBottom"
+                    props = {{
+                      time: this.state.time
+                    }} 
+                  />
+                </Col>
+                
               </Row>
               
             </Col>
