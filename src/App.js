@@ -57,7 +57,7 @@ class App extends React.Component {
                 <Quote />
               </Row>
               <Row>
-                <Col style={{  }}>
+                <Col>
                   <Weather 
                     className='weather'
                     props = {{
