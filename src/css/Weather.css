@@ -1,6 +1,15 @@
 
 .weather {
-  --box-color: #ffffff;
+
+
+  --box-color: none;
+  --box-color2: none;  
+
+  /* --box-color: #000000;
+  --box-color2: #4287f5; */
+
+
+
   border: solid 2px var(--box-color);
 
   display: flex;
@@ -14,6 +23,12 @@
 
   font-size: 80px;
   flex-grow: 1;
+}
+
+.weather-icon-text {
+  border: solid 2px var(--box-color);
+
+  font-size: 20px;
 }
 
 .direction-icon {
@@ -37,17 +52,18 @@
 }
 
 .current-status{
-  border: solid 2px var(--box-color);
+  border: solid 2px var(--box-color2);
 
   flex-grow: 4;
-  font-size: 30px;
+  font-size: 59px;
+  /* align-items: center;
+  justify-content: left; */
 }
 
 .high-and-low {
   border: solid 2px var(--box-color);
 
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: space-around;
   font-size: 30px;
   flex-grow: 2;
   flex-wrap: nowrap;
