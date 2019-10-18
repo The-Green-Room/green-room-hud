@@ -67,22 +67,27 @@ class Weather extends React.Component {
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      // console.log("day")
-      return ('day')
+      
+          console.log(this.state.data.sys.sunset)
+
+      return ['day', this.state.data.sys.sunset - currentTimeUTC]
     } else {
+           console.log(this.state.data.sys.sunrise)
       // console.log("night")
-      return ('night')
+      return ['night', this.state.data.sys.sunrise - currentTimeUTC]
       }
   }
 
   render() {
+    console.log(this.state)
+
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
           <div> 
             <div className='row'>
               <div className='column'>
-                <i className={ `weather-icon wi wi-owm-${ this.state.partOfDay  }-${ this.state.data.weather["0"].id }` } ></i>
+                <i className={ `weather-icon wi wi-owm-${ this.state.partOfDay[0]  }-${ this.state.data.weather["0"].id }` } ></i>
                 <p className='weather-icon-text'>{this.state.data.weather["0"].description}</p>
               </div>
               <div className='column current-temp'>
@@ -91,7 +96,7 @@ class Weather extends React.Component {
               <div className='column current-status'>
                 <p>
                   {/* TODO: how many hours to sunrise or sunset */}
-                  'x' hours to {this.state.partOfDay}
+                  { this.state.partOfDay[1] }
                 </p>
               </div>
             </div>
