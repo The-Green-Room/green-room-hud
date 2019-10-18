@@ -26,10 +26,11 @@
 
   border: solid 2px var(--box-color);
 
-  display: flex;
+ 
   font-family: 'Muli', sans-serif;
   text-align: center;
   justify-content: center;
+  align-items: center;
 }
 
 .weather-icon {
@@ -70,8 +71,8 @@
 
   flex-grow: 4;
   font-size: 32px;
-  align-items: center;
-  justify-content: left;
+  justify-content: center;
+
 }
 
 .high-and-low {
@@ -80,9 +81,4 @@
   justify-content: space-around;
   font-size: 30px;
   flex-grow: 2;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  
-  
 }

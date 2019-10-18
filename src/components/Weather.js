@@ -1,8 +1,4 @@
 import React from 'react'
-import {
-  Row,
-  Col
-} from 'react-bootstrap'
 import '../css/Weather.css'
 
 class Weather extends React.Component {
@@ -84,34 +80,33 @@ class Weather extends React.Component {
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
           <div>
-            <Row>
-              <Col>
-                {/* TODO: call dayOrNight() only when getting weather */}
+            <div className='row'>
+              <div className='column'>
                 <i className={ `weather-icon wi wi-owm-${ this.state.partOfDay  }-${ this.state.data.weather["0"].id }` } ></i>
                 <p className='weather-icon-text'>{this.state.data.weather["0"].description}</p>
-              </Col>
-              <Col className="current-temp">
+              </div>
+              <div className='column current-temp'>
                 <p>{Math.trunc(this.state.data.main.temp)}°</p>
-              </Col>
-              <Col className='current-status'>
-              <p>
-                {/* TODO: how many hours to sunrise or sunset */}
-                'x' hours to {this.state.partOfDay}
-              </p>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
+              </div>
+              <div className='column current-status'>
+                <p>
+                  {/* TODO: how many hours to sunrise or sunset */}
+                  'x' hours to {this.state.partOfDay}
+                </p>
+              </div>
+            </div>
+            <div className='row'>
+              <div className='column'>
                 <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
                 <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
-              </Col>
-              <Col className='high-and-low'>
+              </div>
+              <div className='column high-and-low'>
                 <p>
                   High {Math.trunc(this.state.data.main.temp_max)}°
                   Low {Math.trunc(this.state.data.main.temp_min)}°
                 </p>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
         }         
       </div>
