@@ -79,7 +79,7 @@ class Weather extends React.Component {
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
-          <div>
+          <div> 
             <div className='row'>
               <div className='column'>
                 <i className={ `weather-icon wi wi-owm-${ this.state.partOfDay  }-${ this.state.data.weather["0"].id }` } ></i>
