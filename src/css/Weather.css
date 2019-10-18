@@ -1,12 +1,26 @@
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
 .weather {
 
 
-  --box-color: none;
-  --box-color2: none;  
+  /* --box-color: none;
+  --box-color2: none;   */
 
-  /* --box-color: #000000;
-  --box-color2: #4287f5; */
+  --box-color: #000000;
+  --box-color2: #4287f5;
 
 
 
@@ -55,9 +69,9 @@
   border: solid 2px var(--box-color2);
 
   flex-grow: 4;
-  font-size: 59px;
-  /* align-items: center;
-  justify-content: left; */
+  font-size: 32px;
+  align-items: center;
+  justify-content: left;
 }
 
 .high-and-low {
@@ -67,5 +81,8 @@
   font-size: 30px;
   flex-grow: 2;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  
   
 }

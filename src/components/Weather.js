@@ -101,22 +101,15 @@ class Weather extends React.Component {
               </Col>
             </Row>
             <Row>
-              {this.state.data && 
-                <Col>
-                  <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
-                  <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
-                </Col>
-              }
-              
+              <Col>
+                <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
+                <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
+              </Col>
               <Col className='high-and-low'>
-                <Col>
-                  <p>
-                    High {Math.trunc(this.state.data.main.temp_max)}°
-                  </p>
-                  <p>
-                    Low {Math.trunc(this.state.data.main.temp_min)}°
-                  </p>
-                </Col>
+                <p>
+                  High {Math.trunc(this.state.data.main.temp_max)}°
+                  Low {Math.trunc(this.state.data.main.temp_min)}°
+                </p>
               </Col>
             </Row>
           </div>
