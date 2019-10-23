@@ -39,21 +39,21 @@ export default function (s) {
     }
 
     s.changeColors = function() {
-        if (g1DirectionForeward && g1 > 255) {
+        if (g1 > 255) {
             g1DirectionForeward = false          
-        } else if (!g1DirectionForeward && g1 < -255) {
+        } else if (g1 < 60) {
             g1DirectionForeward = true
         } else if (g1DirectionForeward) {
             g1++
             console.log('foreward ' + g1)
         } else if (!g1DirectionForeward) {
-            g1--
+            g1++
             console.log('reverse ' + g1)
         }
 
-        if (b2DirectionForeward && b2 > 255) {
-            g1DirectionForeward = false          
-        } else if (!b2DirectionForeward && b2 < -255) {
+        if (b2 > 255) {
+            b2DirectionForeward = false          
+        } else if (b2 < 100) {
             b2DirectionForeward = true
         } else if (b2DirectionForeward) {
             b2++

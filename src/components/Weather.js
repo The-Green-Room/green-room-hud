@@ -1,8 +1,4 @@
 import React from 'react'
-import {
-  Row,
-  Col
-} from 'react-bootstrap'
 import '../css/Weather.css'
 
 class Weather extends React.Component {
@@ -71,54 +67,52 @@ class Weather extends React.Component {
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      // console.log("day")
-      return ('day')
+      
+          console.log(this.state.data.sys.sunset)
+
+      return ['day', this.state.data.sys.sunset - currentTimeUTC]
     } else {
+           console.log(this.state.data.sys.sunrise)
       // console.log("night")
-      return ('night')
+      return ['night', this.state.data.sys.sunrise - currentTimeUTC]
       }
   }
 
   render() {
+    //console.log(this.state)
+
     return(
       <div className="weather" >
         {this.state.loading ? <p>Loading...</p> : 
-          <div>
-            <Row>
-              <Col className="weather-icon">
-                {/* TODO: call dayOrNight() only when getting weather */}
-                <i className={ `wi wi-owm-${ this.state.partOfDay  }-${ this.state.data.weather["0"].id }` } ></i>
-              </Col>
-              <Col className="current-temp">
+          <div> 
+            <div className='row'>
+              <div className='column'>
+                <i className={ `weather-icon wi wi-owm-${ this.state.partOfDay[0]  }-${ this.state.data.weather["0"].id }` } ></i>
+                <p className='weather-icon-text'>{this.state.data.weather["0"].description}</p>
+              </div>
+              <div className='column current-temp'>
                 <p>{Math.trunc(this.state.data.main.temp)}°</p>
-              </Col>
-              <Col className='current-status'>
-              <p>
-                It's {Math.trunc(this.state.data.main.temp)}° and {this.state.data.weather["0"].description} in {this.state.data.name}
-              </p>
-              </Col>
-            </Row>
-            <Row>
-              {this.state.data && 
-                <Col>
-                  <i className={ `wind-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
-                  <p className='wind-text'>{ this.state.data.wind.speed } mi/h</p>
-                </Col>
-              }
-              
-              <Col className='high-and-low'>
-                <Col>
-                  <p>
-                    High {Math.trunc(this.state.data.main.temp_max)}°
-                  </p>
-                </Col>
-                <Col>
-                  <p>
-                    Low {Math.trunc(this.state.data.main.temp_min)}°
-                  </p>
-                </Col>
-              </Col>
-            </Row>
+
+              </div>
+              <div className='column current-status'>
+                <p>
+                  {/* TODO: how many hours to sunrise or sunset */}
+                  { this.state.partOfDay[0] }
+                </p>
+              </div>
+            </div>
+            <div className='row'>
+              <div className='column'>
+                <i className={ `direction-icon wi wi-wind towards-${ this.state.data.wind.deg }-deg` } ></i>
+                <p className='direction-text'>{ this.state.data.wind.speed } mi/h</p>
+              </div>
+              <div className='column high-and-low'>
+                <p>
+                  High {Math.trunc(this.state.data.main.temp_max)}°
+                  Low {Math.trunc(this.state.data.main.temp_min)}°
+                </p>
+              </div>
+            </div>
           </div>
         }         
       </div>
