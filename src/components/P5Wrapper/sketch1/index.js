@@ -40,7 +40,8 @@ export default function (s) {
 
     s.changeColors = function() {
         if (g1DirectionForeward && g1 > 255) {
-            g1DirectionForeward = false          
+            g1DirectionForeward = false   
+            console.log('g1 direction ' + g1DirectionForeward)       
         } else if (!g1DirectionForeward && g1 < -255) {
             g1DirectionForeward = true
         } else if (g1DirectionForeward) {
@@ -52,9 +53,11 @@ export default function (s) {
         }
 
         if (b2DirectionForeward && b2 > 255) {
-            g1DirectionForeward = false          
+            b2DirectionForeward = false      
+            console.log('b2 direction ' + g1DirectionForeward)    
         } else if (!b2DirectionForeward && b2 < -255) {
             b2DirectionForeward = true
+            console.log('b2 direction ' + g1DirectionForeward)
         } else if (b2DirectionForeward) {
             b2++
             console.log('foreward b2 ' + b2)
