@@ -79,7 +79,7 @@ class Weather extends React.Component {
   }
 
   render() {
-    console.log(this.state)
+    //console.log(this.state)
 
     return(
       <div className="weather" >
@@ -96,7 +96,7 @@ class Weather extends React.Component {
               <div className='column current-status'>
                 <p>
                   {/* TODO: how many hours to sunrise or sunset */}
-                  { this.state.partOfDay[1] }
+                  { this.state.partOfDay[0] }
                 </p>
               </div>
             </div>

@@ -45,10 +45,10 @@ export default function (s) {
             g1DirectionForeward = true
         } else if (g1DirectionForeward) {
             g1++
-            console.log('foreward ' + g1)
+            console.log('foreward g1 ' + g1)
         } else if (!g1DirectionForeward) {
             g1--
-            console.log('reverse ' + g1)
+            console.log('reverse g1 ' + g1)
         }
 
         if (b2DirectionForeward && b2 > 255) {
@@ -57,10 +57,10 @@ export default function (s) {
             b2DirectionForeward = true
         } else if (b2DirectionForeward) {
             b2++
-            console.log('foreward ' + b2)
+            console.log('foreward b2 ' + b2)
         } else if (!b2DirectionForeward) {
             b2--
-            console.log('reverse ' + b2)
+            console.log('reverse b2 ' + b2)
         }
 
         c1 = s.color(r1, g1, b1)
