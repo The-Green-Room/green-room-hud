@@ -60,21 +60,21 @@ class Weather extends React.Component {
   }
 
   dayOrNight() {
-    var currentTimeUTC =  Date.UTC(this.props.time.getUTCFullYear(), this.props.time.getUTCMonth(),
-      this.props.time.getUTCDate(), this.props.time.getUTCHours(),
-      this.props.time.getUTCMinutes(), this.props.time.getUTCSeconds());
+    var currentTimeUTC =  Date.UTC(this.props.time.getUTCFullYear(), this.props.time.getUTCMonth(), this.props.time.getUTCDate(),
+    this.props.time.getUTCHours(), this.props.time.getUTCMinutes(), this.props.time.getUTCSeconds())
+
+    currentTimeUTC = Math.floor(currentTimeUTC / 1000)
+
+    // console.log("Current time utc: " + currentTimeUTC)
+    // console.log("sunrise: " + this.state.data.sys.sunrise)
+    // console.log("sunset: " + this.state.data.sys.sunset)
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      
-          console.log(this.state.data.sys.sunset)
-
       return ['day', this.state.data.sys.sunset - currentTimeUTC]
     } else {
-           console.log(this.state.data.sys.sunrise)
-      // console.log("night")
       return ['night', this.state.data.sys.sunrise - currentTimeUTC]
-      }
+    }
   }
 
   render() {
@@ -91,7 +91,6 @@ class Weather extends React.Component {
               </div>
               <div className='column current-temp'>
                 <p>{Math.trunc(this.state.data.main.temp)}°</p>
-
               </div>
               <div className='column current-status'>
                 <p>
