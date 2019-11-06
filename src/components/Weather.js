@@ -25,7 +25,6 @@ class Weather extends React.Component {
     this.getWeather(this.lat, this.lon, this.apikey, this.units)
     this.intervalID = setInterval(() => {
       this.getWeather(this.lat, this.lon, this.apikey, this.units)
-      console.log(this.intervalID)
     }, 600000)
   }
 

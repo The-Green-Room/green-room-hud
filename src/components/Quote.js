@@ -14,7 +14,10 @@ class Quote extends React.Component {
   componentDidMount() {
     this.getNewQuote()
 
-    this.intervalID = setInterval((this.getNewQuote(), 300000))
+    this.intervalID = setInterval(() => {
+      this.getNewQuote()
+      console.log(this.intervalID)
+    }, 300000)
   }
 
   componentWillUnmount() {
@@ -26,6 +29,8 @@ class Quote extends React.Component {
     const authorSlice = fullQuoteText.slice(fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
     const quoteSlice = fullQuoteText.slice(0, fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
     this.setState({ ...this.state, quote: quoteSlice, author: authorSlice})
+
+    console.log("get new quote")
   }
 
   render() {

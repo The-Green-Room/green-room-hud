@@ -47,6 +47,8 @@ class App extends React.Component {
 
     return (
       <div>
+
+        {/* switch to webgl  */}
         <P5Wrapper
           p5props={{}}
           // onSetAppState={this.onSetAppState}
