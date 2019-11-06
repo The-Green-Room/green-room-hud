@@ -71,9 +71,9 @@ class Weather extends React.Component {
 
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      return ['day', this.state.data.sys.sunset - currentTimeUTC]
+      return ['day', Math.floor((this.state.data.sys.sunset - currentTimeUTC) / 3600) + " hours to sunset"]
     } else {
-      return ['night', this.state.data.sys.sunrise - currentTimeUTC]
+      return ['night', Math.floor((this.state.data.sys.sunrise - currentTimeUTC) / 3600) + " hours to sunrise"]
     }
   }
 
@@ -95,7 +95,7 @@ class Weather extends React.Component {
               <div className='column current-status'>
                 <p>
                   {/* TODO: how many hours to sunrise or sunset */}
-                  { this.state.partOfDay[0] }
+                  { this.state.partOfDay[1] }
                 </p>
               </div>
             </div>
