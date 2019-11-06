@@ -69,11 +69,16 @@ class Weather extends React.Component {
     // console.log("sunrise: " + this.state.data.sys.sunrise)
     // console.log("sunset: " + this.state.data.sys.sunset)
 
+    var timeToSunChange = 0
+
     if (currentTimeUTC > this.state.data.sys.sunrise &&
         currentTimeUTC < this.state.data.sys.sunset)  {
-      return ['day', Math.floor((this.state.data.sys.sunset - currentTimeUTC) / 3600) + " hours to sunset"]
+      timeToSunChange = this.state.data.sys.sunset - currentTimeUTC
+      return ['day', Math.floor((timeToSunChange) / 3600) + " hours to sunset"]
     } else {
-      return ['night', Math.floor((this.state.data.sys.sunrise - currentTimeUTC) / 3600) + " hours to sunrise"]
+      timeToSunChange = this.state.data.sys.sunrise - currentTimeUTC
+      return ['night', Math.floor((timeToSunChange) / 3600) + " hours to sunrise"]
+      // return ['night', Math.floor((timeToSunChange) / 3600) + " hours " + Math.floor(((timeToSunChange / 3600) - Math.floor(timeToSunChange / 3600) / 60)) + " minutes to sunrise"]
     }
   }
 
