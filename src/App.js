@@ -35,6 +35,7 @@ class App extends React.Component {
   }
 
   tick () {
+    delete this.state.time
     this.setState((prevState) => {
       return { ...prevState, time: new Date() }
     })

@@ -28,6 +28,7 @@ class Quote extends React.Component {
     const fullQuoteText = quoteStrings[Math.floor(Math.random() * 100)]
     const authorSlice = fullQuoteText.slice(fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
     const quoteSlice = fullQuoteText.slice(0, fullQuoteText.search(/ -\w[A-Za-z .\-!?]*/))
+    delete this.state.quote; delete this.state.author
     this.setState({ ...this.state, quote: quoteSlice, author: authorSlice})
 
     console.log("get new quote")
