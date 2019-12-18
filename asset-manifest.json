@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/hud/static/css/main.b830e043.chunk.css",
-    "main.js": "/hud/static/js/main.30c97b25.chunk.js",
-    "main.js.map": "/hud/static/js/main.30c97b25.chunk.js.map",
+    "main.css": "/hud/static/css/main.7ea59c72.chunk.css",
+    "main.js": "/hud/static/js/main.c32777d5.chunk.js",
+    "main.js.map": "/hud/static/js/main.c32777d5.chunk.js.map",
     "runtime-main.js": "/hud/static/js/runtime-main.2426aa9e.js",
     "runtime-main.js.map": "/hud/static/js/runtime-main.2426aa9e.js.map",
-    "static/css/2.5ed8efde.chunk.css": "/hud/static/css/2.5ed8efde.chunk.css",
-    "static/js/2.8969344c.chunk.js": "/hud/static/js/2.8969344c.chunk.js",
-    "static/js/2.8969344c.chunk.js.map": "/hud/static/js/2.8969344c.chunk.js.map",
+    "static/css/2.e79d789d.chunk.css": "/hud/static/css/2.e79d789d.chunk.css",
+    "static/js/2.2a88db4f.chunk.js": "/hud/static/js/2.2a88db4f.chunk.js",
+    "static/js/2.2a88db4f.chunk.js.map": "/hud/static/js/2.2a88db4f.chunk.js.map",
     "index.html": "/hud/index.html",
-    "precache-manifest.7686996f4b91706c308ea3705176f729.js": "/hud/precache-manifest.7686996f4b91706c308ea3705176f729.js",
+    "precache-manifest.05a5448d245c7b0446a25fd2818d125c.js": "/hud/precache-manifest.05a5448d245c7b0446a25fd2818d125c.js",
     "service-worker.js": "/hud/service-worker.js",
-    "static/css/2.5ed8efde.chunk.css.map": "/hud/static/css/2.5ed8efde.chunk.css.map",
-    "static/css/main.b830e043.chunk.css.map": "/hud/static/css/main.b830e043.chunk.css.map",
+    "static/css/2.e79d789d.chunk.css.map": "/hud/static/css/2.e79d789d.chunk.css.map",
+    "static/css/main.7ea59c72.chunk.css.map": "/hud/static/css/main.7ea59c72.chunk.css.map",
     "static/media/calendar_config": "/hud/static/media/calendar_config.791709ba.bin"
   }
 }
