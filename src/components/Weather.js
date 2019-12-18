@@ -33,30 +33,32 @@ class Weather extends React.Component {
   }
 
   getWeather(lat, lon, apikey, units) {
-    this.setState((prevState) => {
-      return {
-        ...prevState,
-        loading: true
+    this.setState(
+      (prevState) => {
+        return {
+          ...prevState,
+          loading: true
+        }
+      }, () => {
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&APPID=' + apikey + '&units=' + units)
+        .then(response =>  response.json())
+        .then(data => {
+          this.setState((prevState) =>{
+            return {
+              ...prevState,
+              data: data
+            }
+          })
+          this.setState((prevState) => {
+            return {
+              ...prevState,
+              partOfDay: this.dayOrNight(),
+              loading: false
+            }
+          })
+        })
       }
-    }, () => {
-      fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&APPID=' + apikey + '&units=' + units)
-      .then(response =>  response.json())
-      .then(data => {
-        this.setState((prevState) =>{
-          return {
-            ...prevState,
-            data: data
-          }
-        })
-        this.setState((prevState) => {
-          return {
-            ...prevState,
-            partOfDay: this.dayOrNight(),
-            loading: false
-          }
-        })
-      })
-    })
+    )
   }
 
   dayOrNight() {
