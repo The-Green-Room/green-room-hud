@@ -12,6 +12,7 @@ import Clock from 'react-clock'
 import Quote from './components/Quote'
 import P5Wrapper from './components/P5Wrapper'
 import Weather from './components/Weather'
+import { months } from 'moment'
 
 const calendar_configuration = calendar_config
 
@@ -46,6 +47,10 @@ class App extends React.Component {
     const currentTime = this.state.time
     const bigTimeString = `${(h = currentTime.getHours()) === 0 ? 12 : h < 12 ? h : h - 12}:${currentTime.getMinutes().toString().padStart(2, '0')} ${(h < 12 ? 'AM' : 'PM')}`
 
+    let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    let monthdsOfYear = ['Januauary', 'Februrary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const dayString = `${ daysOfWeek[currentTime.getDay()] }, ${ monthdsOfYear[currentTime.getMonth()] } ${ currentTime.getDate() }, ${ 1900 + currentTime.getYear() }`
+
     return (
       <div>
 
@@ -73,10 +78,13 @@ class App extends React.Component {
               </Row>
             </Col>
             <Col className='clock'>
+              <p style={{ marginTop: 0, fontFamily: 'Orbitron', fontSize: 50, textAlign: "center" }}>
+                {dayString}
+              </p>
               <Clock
                 className='analog-clock'
                 value={this.state.time}
-                size={700}
+                size={600}
                 hourHandWidth={20}
                 hourHandLength={40}
                 hourHandOppositeLength={8}
