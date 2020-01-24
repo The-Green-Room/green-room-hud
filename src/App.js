@@ -50,10 +50,12 @@ class App extends React.Component {
       <div>
 
         {/* switch to webgl  */}
-        <P5Wrapper
+        {/* <P5Wrapper
           p5props={{}}
           // onSetAppState={this.onSetAppState}
-        />
+        /> */}
+
+        <iframe className='background' title="spotifyBackground" src="http://localhost:8080/#start"></iframe>
 
         <Container fluid={true} style={{ flexWrap: 'nowrap' }}>
           <Row style={{ height: 960 }}>
